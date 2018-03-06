@@ -8,7 +8,16 @@ var divide = function(dividend,divisor) {
     result = dividend / divisor;
     console.log(result);
 }
-//var floor
+// var floor = function(number,precision) {
+//     if (precision === undefined || precision == 0) {
+//         result = Math.floor(number);
+//         console.log(result);
+//     } 
+//     if (precision > 0) {
+//         result = number.toPrecision(precision);
+//         console.log(result);
+//     }    
+// }
 var max = function(arr) {
     var largestNumber = 0;
     for (i = 0; i < arr.length; i++) {
@@ -86,3 +95,30 @@ var inRange = function(number,start,end) {
         console.log(number);
     }
 }
+var random = function(min,max,float) {
+    if (min % 1 !== 0 || max % 1 !== 0 || float === true) {
+        var result = Math.random() * (max - min) + min;
+        console.log(result);
+    }
+    else {
+        var result = Math.floor(Math.random() * (max - min) + min);
+        console.log(result);        
+    }
+
+}
+//Lodash Array
+//var chunk
+var compact = function(arr) {
+    var result = [];
+    for (i = 0; i < arr.length; i++){
+        for (j = i; j < arr.length; j++) {
+            if (arr[i] != 0 && arr[i] != false) {
+                result[j] = arr[i];
+            }
+            else result[j] = "falsey"; //How do I handle this?
+        }
+    }
+    console.log(result);
+}
+//var concat
+
