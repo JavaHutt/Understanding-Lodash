@@ -108,17 +108,33 @@ var random = function(min,max,float) {
 }
 //Lodash Array
 //var chunk
+// var compact = function(arr) {    
+//     var remove;
+//     var result = [];
+//     for (i = 0; i < arr.length; i++){        
+//         for (j = i; j < arr.length; j++) {            
+//             if (arr[i] != 0 && arr[i] != false) {
+//                 result[j] = arr[i];                
+//             }
+//             else continue;//How do I handle this?
+//         }
+//     }   
+//     console.log(result);
+// }
 var compact = function(arr) {
+    var remove;
     var result = [];
-    for (i = 0; i < arr.length; i++){
-        for (j = i; j < arr.length; j++) {
-            if (arr[i] != 0 && arr[i] != false) {
-                result[j] = arr[i];
-            }
-            else result[j] = "falsey"; //How do I handle this?
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] != 0 && arr[i] != false && arr[i] != undefined && arr[i] != NaN) {     
+            j = i;   
+            result[j] = arr[i];
+        } else {
+            j = i;
+            result[j] = remove;
         }
     }
-    console.log(result);
+    result = result.filter(function(number){ return number != remove }); 
+    console.log(result)
 }
+compact([1,2,0,4,false,118,0]);
 //var concat
-
