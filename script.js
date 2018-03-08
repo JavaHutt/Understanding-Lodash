@@ -1,11 +1,11 @@
 //Lodash Math
 var add = function(augend,addend) {
-    result = +augend + +addend;
+    var result = +augend + +addend;
     console.log(result);
 }
 //var ceil
 var divide = function(dividend,divisor) {
-    result = dividend / divisor;
+    var result = dividend / divisor;
     console.log(result);
 }
 // var floor = function(number,precision) {
@@ -46,12 +46,12 @@ var min = function(arr) {
 console.log(smallestNumber);
 }
 var multiply = function(multiplier,multiplicant) {
-    result = multiplier * multiplicant;
+    var result = multiplier * multiplicant;
     console.log(result);
 }
 //var round
 var subtract = function(minuend,subtrahend) {
-    result = minuend - subtrahend;
+    var result = minuend - subtrahend;
     console.log(result);
 }
 var sum = function(arr) {    
@@ -108,19 +108,6 @@ var random = function(min,max,float) {
 }
 //Lodash Array
 //var chunk
-// var compact = function(arr) {    
-//     var remove;
-//     var result = [];
-//     for (i = 0; i < arr.length; i++){        
-//         for (j = i; j < arr.length; j++) {            
-//             if (arr[i] != 0 && arr[i] != false) {
-//                 result[j] = arr[i];                
-//             }
-//             else continue;//How do I handle this?
-//         }
-//     }   
-//     console.log(result);
-// }
 var compact = function(arr) {
     var remove;
     var result = [];
@@ -136,5 +123,4 @@ var compact = function(arr) {
     result = result.filter(function(number){ return number != remove }); 
     console.log(result)
 }
-compact([1,2,0,4,false,118,0]);
 //var concat
