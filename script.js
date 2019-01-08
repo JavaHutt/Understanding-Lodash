@@ -124,3 +124,10 @@ var compact = function(arr) {
     console.log(result)
 }
 //var concat
+
+var a = { name: "Ivan", age: 40 };
+    var b = Object.assign({}, a);
+    // var b = [].concat(someArray);
+    a.age = 90;
+    console.log(a);
+    console.log(b);
